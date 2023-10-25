@@ -33,9 +33,3 @@ class Usuario():
             print(res)
             return jsonify({"acceso": "ACCESO A LA CUENTA NO AUTORIZADO"})
     
-    # def datos_usuario(self):
-            
-    #     response = requests.get('https://tscfmjlnezdjlzwsmcmx.supabase.co/rest/v1/usuario?select=*', 
-    #                             headers= self.headers)
-    #     return response.content
-    

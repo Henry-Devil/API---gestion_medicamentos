@@ -8,7 +8,7 @@ from routes.medico_rutas import *
 from routes.reportes_rutas import *
 
 app = Flask(__name__)
-cors = CORS(app, resources={r"/*": {"origins": "http://127.0.0.1:5000"}})
+cors = CORS(app, resources={r"/*": {"origins": "http://localhost:4200"}})
 
 app.register_blueprint(registrar_usuario)
 app.register_blueprint(iniciar_sesion)
@@ -24,4 +24,4 @@ def pagina_no_encontrada(error):
 
 if __name__=="__main__":
     app.register_error_handler(404 , pagina_no_encontrada)
-    app.run(port=5000, debug=True)
+    app.run(host='127.0.0.1', port=5000)
